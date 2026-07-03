@@ -5,17 +5,17 @@ A lightweight shell script to test plain DNS, DNS over HTTPS (DoH) and DNS over 
 ## Usage
 ## Quick run:
 ```bash
-wget -qO- https://raw.githubusercontent.com/itdoginfo/checkdns/refs/heads/main/checkdns.sh | sh
+wget -qO- https://raw.githubusercontent.com/TheSainEyereg/checkdns/refs/heads/main/checkdns.sh | sh
 ```
 
 ### Test custom domain:
 ```bash
-wget -qO- https://raw.githubusercontent.com/itdoginfo/checkdns/refs/heads/main/checkdns.sh | sh -s example.com
+wget -qO- https://raw.githubusercontent.com/TheSainEyereg/checkdns/refs/heads/main/checkdns.sh | sh -s example.com
 ```
 
 ### Download and run locally:
 ```bash
-wget https://raw.githubusercontent.com/itdoginfo/checkdns/refs/heads/main/checkdns.sh
+wget https://raw.githubusercontent.com/TheSainEyereg/checkdns/refs/heads/main/checkdns.sh
 chmod +x checkdns.sh
 ./checkdns.sh
 ```
