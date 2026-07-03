@@ -68,14 +68,18 @@ query_wrapper() {
         endpoint_part=""
     fi
 
-    IFS=',' read -r -a hosts <<< "$host_part"
+    oldifs="$IFS"
+    IFS=','
 
-    for host in "${hosts[@]}"; do
+    for host in $host_part; do
+        IFS="$oldifs"
         host=$(echo "$host" | xargs)
         if [ -n "$host" ]; then
             dns_query "$protocol" "$resolver_name" "$host" "$endpoint_part"
         fi
     done
+
+    IFS="$oldifs"
 }
 
 echo "🔓 Plain DNS (UDP)"
