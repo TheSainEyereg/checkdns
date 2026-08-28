@@ -4,8 +4,8 @@
 
 DOMAIN="${1:-itdog.info}"
 RESOLVERS_UDP="Cloudflare:1.1.1.1,1.1 Google:8.8.8.8,8.4.4.8 Quad9:9.9.9.9,149.112.112.112 AdGuardDNS:94.140.14.140,94.140.14.141 NextDNS:45.90.28.43,45.90.30.43 DNS4EU:86.54.11.100,86.54.11.200 ControlD:76.76.2.0,76.76.10.0 Wikimedia:185.71.138.138"
-RESOLVERS_DOT="Cloudflare:cloudflare-dns.com Google:dns.google Quad9:dns.quad9.net AdGuardDNS:dns.adguard-dns.com NextDNS:dns.nextdns.io DNS4EU:unfiltered.joindns4.eu ControlD:p0.freedns.controld.com Wikimedia:wikimedia-dns.org"
-RESOLVERS_DOH="Cloudflare:cloudflare-dns.com Google:dns.google Quad9:dns.quad9.net AdGuardDNS:dns.adguard-dns.com NextDNS:dns.nextdns.io DNS4EU:unfiltered.joindns4.eu ControlD:freedns.controld.com/p0 Wikimedia:wikimedia-dns.org"
+RESOLVERS_DOT="Cloudflare:cloudflare-dns.com,1.1.1.1,1.1 Google:dns.google Quad9:dns.quad9.net AdGuardDNS:dns.adguard-dns.com NextDNS:dns.nextdns.io DNS4EU:unfiltered.joindns4.eu ControlD:p0.freedns.controld.com Wikimedia:wikimedia-dns.org"
+RESOLVERS_DOH="Cloudflare:cloudflare-dns.com,1.1.1.1,1.1 Google:dns.google Quad9:dns.quad9.net AdGuardDNS:dns.adguard-dns.com NextDNS:dns.nextdns.io DNS4EU:unfiltered.joindns4.eu ControlD:freedns.controld.com/p0 Wikimedia:wikimedia-dns.org"
 
 if ! command -v dig >/dev/null 2>&1; then
     echo "dig is not installed. Commands to install:"
